@@ -26,6 +26,22 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }) 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
+  use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  }
+  use {
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'neovim/nvim-lspconfig'
+  }
+  use {'github/copilot.vim'}
   if packer_bootstrap then
     require('packer').sync()
   end
