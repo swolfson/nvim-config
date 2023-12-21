@@ -43,6 +43,7 @@ vim.api.nvim_set_keymap('n', '<leader>pt', ':-tabnext<CR>', { noremap = true, si
 vim.api.nvim_set_keymap('n', '<leader>pt', ':-tabnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>b', ':buffer<space>', { noremap = true, silent = true })
 
 
 
